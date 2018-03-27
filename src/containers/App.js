@@ -1,17 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
-import { fetchLocations } from '../helpers/api';
+import MapContainer from '../containers/MapContainer';
+import DetailsContainer from '../containers/DetailsContainer';
+import LoaderContainer from '../containers/LoaderContainer';
 
 class App extends React.Component {
-  componentDidMount() {
-    fetchLocations()
-      .then(response => console.log(response))
-      .catch(error => console.log(error));
-  }
-
   render() {
-    return <h1>Locations Map Exercise!</h1>;
+    return (
+      <div>
+        <MapContainer />
+        <DetailsContainer />
+        <LoaderContainer />
+      </div>
+    );
   }
 }
 
