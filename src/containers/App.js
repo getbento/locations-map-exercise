@@ -1,17 +1,21 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
-import { fetchLocations } from '../helpers/api';
+import Map from './Map/Map';
 
 class App extends React.Component {
-  componentDidMount() {
-    fetchLocations()
-      .then(response => console.log(response))
-      .catch(error => console.log(error));
+  constructor(props) {
+    super(props);
+    this.state = {
+      locations: []
+    };
   }
 
   render() {
-    return <h1>Locations Map Exercise!</h1>;
+    return (
+      <div>
+        {/* <h1>Locations Map Exercise!</h1> */}
+        <Map />
+      </div>
+    );
   }
 }
 

@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+// import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 const LAUNCH_COMMAND = process.env.npm_lifecycle_event;
 const isProduction = LAUNCH_COMMAND === 'build';
@@ -45,6 +46,10 @@ const base = {
             loader: 'babel-loader'
           }
         ]
+      },
+      {
+        test: /\.css/,
+        loader: 'style-loader!css-loader?modules=true&localIdentName=[name]__[local]__[hash:base64:5]'
       }
     ]
   },
