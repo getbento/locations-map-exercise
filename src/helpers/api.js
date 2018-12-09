@@ -1,5 +1,5 @@
 import { LOCATIONS } from './constants';
-
+import { GOOGLE_API_KEY } from './google';
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
@@ -13,7 +13,7 @@ export function fetchLocations() {
 }
 
 export function getGeocode(address, successcallback, errorcallback) {
-  let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=AIzaSyDZiardQQ0rYusEWeQlivZSxeJIpkOfrxM`;
+  let url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${GOOGLE_API_KEY}`;
   return fetch(url)
     .then((response) => {
       return response.json();

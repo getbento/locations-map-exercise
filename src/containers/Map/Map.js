@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styles from './map.css';
 import { fetchLocations, getGeocode } from '../../helpers/api';
+import { GOOGLE_API_KEY } from '../../helpers/google';
 
 import Modal from '../Modal/Modal';
 import Detail from '../Detail/Detail';
@@ -50,7 +51,7 @@ class Map extends Component {
    * Loads the google maps javascript and execute the initmap callback
    */
   renderMap() {
-    loadScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyDZiardQQ0rYusEWeQlivZSxeJIpkOfrxM&callback=initMap');
+    loadScript(`https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&callback=initMap`);
     window.initMap = this.initMap;
   }
 
