@@ -95,7 +95,7 @@ class App extends React.Component {
     return (
       <div style={{ width: '100vw', height: '100vh', margin: '0px', padding: '0px', display: 'flex', flex: 1 }}>
         {this.state.loading
-          ? <h1 style={{ position: 'absolute', zIndex: '100' }}>Loading...</h1>
+          ? <h1 style={{ position: 'absolute', zIndex: '100' }}>Loading locations...</h1>
           : null
         }
         <div ref={el => { this.mapContainer = el; }} style={{ flex: 1, margin: '0px', padding: '0px' }} />
