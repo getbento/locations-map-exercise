@@ -43,7 +43,10 @@ class App extends React.Component {
 
     fetchLocations()
       .then(locations => this.fetchCoordinatesAndAddToLocationObjects(locations))
-      .then(locationsWithMapboxFeatures => this.createMarkers(locationsWithMapboxFeatures))
+      .then(locationsWithMapboxFeatures => {
+        this.setState({ loading: false });
+        this.createMarkers(locationsWithMapboxFeatures);
+      })
       .catch(error => console.log(error));
   }
 
