@@ -15,10 +15,13 @@ class App extends React.Component {
       lng: STARTING_LONGITUDE,
       lat: STARTING_LATITUDE,
       zoom: STARTING_ZOOM,
-      selectedLocation: null
+      showFullDetails: false,
+      selectionHistory: [],
+      selectionHistoryPointer: -1
     };
-    this.showDetails = this.showDetails.bind(this);
     this.closeDetails = this.closeDetails.bind(this);
+    this.selectToViewDetails = this.selectToViewDetails.bind(this);
+    this.navigateSelectionHistory = this.navigateSelectionHistory.bind(this);
   }
 
   componentDidMount() {
@@ -60,7 +63,7 @@ class App extends React.Component {
 
   createPopupsAndMarkersAndAddToMap(locationsWithFeatues) {
     locationsWithFeatues.forEach(locationWithFeature => {
-      const popup = constructMapboxPopup({ locationWithFeature, onClickFunction: this.showDetails });
+      const popup = constructMapboxPopup({ locationWithFeature, onClickFunction: this.selectToViewDetails });
       const marker = constructMapboxMarker();
       marker.setPopup(popup)
         .setLngLat(locationWithFeature.mapboxFeature[0].center)
@@ -68,15 +71,28 @@ class App extends React.Component {
     });
   }
 
-  showDetails(locationWithFeature) {
-    this.setState({ selectedLocation: locationWithFeature });
+  selectToViewDetails(locationWithFeature) {
+    let { selectionHistory, selectionHistoryPointer } = this.state;
+    selectionHistory.push(locationWithFeature);
+    selectionHistoryPointer = selectionHistory.length - 1;
+    this.setState({ showFullDetails: true, selectionHistory, selectionHistoryPointer });
   }
 
   closeDetails() {
-    this.setState({ selectedLocation: null });
+    this.setState({ showFullDetails: false });
+  }
+
+  navigateSelectionHistory(num) {
+    let { selectionHistory, selectionHistoryPointer } = this.state;
+    if ((num > 0 && selectionHistoryPointer + num < selectionHistory.length) ||
+    (num < 0 && selectionHistoryPointer + num >= 0)) {
+      this.setState({ selectionHistoryPointer: selectionHistoryPointer + num });
+    }
   }
 
   render() {
+    const { selectionHistory, selectionHistoryPointer } = this.state;
+    const locationWithFeature = selectionHistory[selectionHistoryPointer];
     return (
       <div style={{ width: '100vw', height: '100vh', margin: '0px', padding: '0px', display: 'flex', flex: 1 }}>
         {this.state.loading
@@ -84,10 +100,13 @@ class App extends React.Component {
           : null
         }
         <div ref={el => { this.mapContainer = el; }} style={{ flex: 1, margin: '0px', padding: '0px' }} />
-        {this.state.selectedLocation
+        {this.state.showFullDetails
           ? <FullDetails
             closeDetails={this.closeDetails}
-            locationData={this.state.selectedLocation.locationData} />
+            selectionHistory={selectionHistory}
+            locationData={locationWithFeature.locationData}
+            selectionHistoryPointer={selectionHistoryPointer}
+            navigateSelectionHistory={this.navigateSelectionHistory} />
           : null
         }
       </div>

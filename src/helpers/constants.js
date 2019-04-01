@@ -1,6 +1,6 @@
-export const STARTING_LONGITUDE = -100;
+export const STARTING_LONGITUDE = -95;
 export const STARTING_LATITUDE = 39;
-export const STARTING_ZOOM = 2.5;
+export const STARTING_ZOOM = 3.5;
 
 export const LOCATIONS = [
   {
