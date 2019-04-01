@@ -35,3 +35,15 @@ If you have any problems getting the app started or installing the dependencies,
 
 1.  If more than one image is returned by the API for a given location, display an image slider.
 2.  Implement undo/redo functionality to cycle through the previously selected locations.
+
+# Notes
+
+The smaller size and shorter time frame of this project influenced most of my decisions, and I've included some relevant notes below.
+
+- I hadn't worked with a mapping library in over a year, but after a bit of research my inclination was to use react-mapbox-gl (a react wrapper for mapbox-gl-js). For a small project like this I thought the benefits of its familiar, declaritive style would outweigh the flexibility I'd need to give up by using someone else's werapper. However, it didn't play nicely with the project's current configuration and I couldn't get it to run. Rather than dive into babel/webpack, I decided to use pure mapbox-gl-js.
+- I normally use Redux to implement global state management. However, because of the limited scope of the project I never got to a point where it seemed like it would be helpful, and I wound up sticking with local state management.
+- I used inline styling for my React components, and a style tag in index.html for the mapbox popups and markers. In a larger project I'd focus on building out a full stylesheet.
+- I used an array on local state to implement navigation through selection history. There's no limit on the size of the array, just catches to make sure that you can't navigate outside the array. It might be worthwhile to have some sort of bound on the size of the selection history.
+- I used a library called DOMPurify to handle the HTML strings we received from the API. I spent a little bit of time reviewing it, but would want to spend more time confirming it's the right library for the job.
+- I broke out a component called NavigationButton.js to clean up FullDetails.js. In a larger project, it probably would have been better not to make it specific to navigation, and use the same component for the close button that also appears in FullDetails.js.
+- I decided to use a default image when one wasn't provided by the API, which helped with styling and formatting.

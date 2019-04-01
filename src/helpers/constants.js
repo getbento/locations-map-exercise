@@ -1,3 +1,7 @@
+export const STARTING_LONGITUDE = -95;
+export const STARTING_LATITUDE = 39;
+export const STARTING_ZOOM = 3.5;
+
 export const LOCATIONS = [
   {
     slug: 'gran-electrica-napa',
