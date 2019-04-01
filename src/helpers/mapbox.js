@@ -23,12 +23,14 @@ export async function fetchCoordinatesAndAddToLocationObjects(locations) {
 
 export function constructMapboxPopup({ locationWithFeature, onClickFunction }) {
   const popupEl = document.createElement('div');
-  const popupName = document.createElement('h3');
+  popupEl.className = 'popup';
+  const popupName = document.createElement('h2');
   popupName.innerText = `${locationWithFeature.locationData.name}`;
   const popupAddress = document.createElement('p');
   popupAddress.innerText = `${locationWithFeature.locationData.address}`;
   const popupButton = document.createElement('button');
   popupButton.innerText = 'View Details';
+  popupButton.className = 'popupButton';
   popupButton.addEventListener('click', () => onClickFunction(locationWithFeature));
   popupEl.appendChild(popupName);
   popupEl.appendChild(popupAddress);
@@ -39,7 +41,7 @@ export function constructMapboxPopup({ locationWithFeature, onClickFunction }) {
 }
 
 export function constructMapboxMarker() {
-  const el = document.createElement('div');
-  el.className = 'marker';
-  return new mapboxgl.Marker(el);
+  const markerEl = document.createElement('div');
+  markerEl.className = 'marker';
+  return new mapboxgl.Marker(markerEl);
 }

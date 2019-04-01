@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DOMPurify from 'dompurify';
+import NavigationButton from './NavigationButton';
 
 class FullDetails extends React.Component {
   render() {
@@ -20,24 +21,8 @@ class FullDetails extends React.Component {
             onClick={closeDetails}>
             <p style={{ margin: '0' }}>{`X`}</p>
           </button>
-          <button
-            style={validBackwardNavigation
-              ? { height: '30px', width: '30px', borderRadius: '15px', backgroundColor: 'rgba(255, 255, 255, 0.9)', marginRight: '15px' }
-              : { height: '30px', width: '30px', borderRadius: '15px', backgroundColor: 'rgba(255, 255, 255, 0.3)', marginRight: '15px' }}
-            onClick={() => {
-              if (validBackwardNavigation) navigateSelectionHistory(-1);
-            }}>
-            <p style={{ margin: '0' }}>{`<`}</p>
-          </button>
-          <button
-            style={validForwardNavigation
-              ? { height: '30px', width: '30px', borderRadius: '15px', backgroundColor: 'rgba(255, 255, 255, 0.9)', marginRight: '15px' }
-              : { height: '30px', width: '30px', borderRadius: '15px', backgroundColor: 'rgba(255, 255, 255, 0.3)', marginRight: '15px' }}
-            onClick={() => {
-              if (validForwardNavigation) navigateSelectionHistory(1);
-            }}>
-            <p style={{ margin: '0' }}>{`>`}</p>
-          </button>
+          <NavigationButton active={validBackwardNavigation} onClick={() => navigateSelectionHistory(-1)} text={'<'} />
+          <NavigationButton active={validForwardNavigation} onClick={() => navigateSelectionHistory(1)} text={'>'} />
         </div>
         <img style={{ height: '50vh', width: '50vw', objectFit: 'cover' }} src={url} alt={altText} />
         <div style={{ height: '50vh', padding: '0px 10px', overflowY: 'auto' }}>
