@@ -1,7 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import { fetchLocations } from '../helpers/api';
+import { fetchLocations } from "../helpers/api";
+import Map from "../components/Map";
 
 class App extends React.Component {
   componentDidMount() {
@@ -11,7 +12,12 @@ class App extends React.Component {
   }
 
   render() {
-    return <h1>Locations Map Exercise!</h1>;
+    return (
+      <React.Fragment>
+        <h1>Locations Map Exercise!</h1>
+        <Map />
+      </React.Fragment>
+    );
   }
 }
 

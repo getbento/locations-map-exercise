@@ -1,13 +1,14 @@
+// I'm used to using transformed class properties, and it
+// seemed like the fastest way to add them was to just (over) update all
+// of the babel/webpack dependencies. I would of course never do
+// something so drastic "in real life."
+
 {
-  "presets": [
-    "react",
-    "es2015",
-  ],
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": ["@babel/plugin-proposal-class-properties"],
   "env": {
     "start": {
-      "presets": [
-        "react-hmre"
-      ]
+      "presets": ["@babel/preset-env", "@babel/preset-react"]
     }
   }
 }
