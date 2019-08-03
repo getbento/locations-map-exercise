@@ -18,25 +18,39 @@ class Map extends React.Component {
       document.body.appendChild(googleMapsScript);
 
       googleMapsScript.addEventListener("load", e => {
-        console.log("IT LOADED!!!", window.google);
-        this.initializeMap();
+        this.googleMap = this.geocodeAndInializeMap(this.props.locations);
       });
     } else {
-      this.setState({
-        loading: false
-      });
-      this.initializeMap();
+      this.geocodeAndInializeMap(this.props.locations);
     }
   }
 
-  initializeMap = () => {
+  // TO DO: Geocode OVER_QUERY_LIMIT error when results array is longer than 11 items
+  geocodeAndInializeMap = addressData => {
     this.setState({
       loading: false
     });
-    console.log("got to initialize map");
-    new google.maps.Map(this.mapBoxRef.current, {
-      center: { lat: 40.6794, lng: -74.0014 },
-      zoom: 12
+    const resultsMap = new google.maps.Map(this.mapBoxRef.current, {
+      center: { lat: 39.100273, lng: -94.588769 },
+      zoom: 4
+    });
+    const geocoder = new google.maps.Geocoder();
+    addressData.map(item => {
+      geocoder.geocode({ address: item.address }, function(
+        results,
+        status
+      ) {
+        if (status == "OK") {
+          new google.maps.Marker({
+            map: resultsMap,
+            position: results[0].geometry.location
+          });
+        } else {
+          alert(
+            "Geocode was not successful for the following reason: " + status
+          );
+        }
+      });
     });
   };
 
@@ -45,9 +59,9 @@ class Map extends React.Component {
     return (
       <React.Fragment>
         {this.state.loading ? (
-          <h2>loading...</h2>
+          <h2>locations loading...</h2>
         ) : (
-          <MapBox ref={this.mapBoxRef}>Map Goes Here</MapBox>
+          <MapBox ref={this.mapBoxRef} />
         )}
       </React.Fragment>
     );
