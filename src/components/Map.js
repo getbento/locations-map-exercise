@@ -2,13 +2,36 @@ import React, { createRef } from "react";
 import styled from "styled-components";
 
 const MapBox = styled.div`
-  width: 800px
-  height: 800px
+  width: 800px;
+  height: 600px;
+  z-index: -1;
+  position: relative;
+`;
+
+const MapBoxWrapper = styled.div`
+
+`
+
+const Overlay = styled.div`
+  z-index: 1000;
+  height: 600px;
+  width: 800px;
+  background: rgba(10,10,10,0.5);
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  & h1 {
+    margin: auto;
+    color: white;
+    font-weight: 400;
+  }
 `;
 
 class Map extends React.Component {
   state = {
-    loading: true
+    loading: true,
+    markerCount: 0
   };
 
   componentDidMount() {
@@ -16,17 +39,14 @@ class Map extends React.Component {
       const googleMapsScript = document.createElement("script");
       googleMapsScript.src = `https://maps.google.com/maps/api/js?key=AIzaSyB9iEsdx1njWPrzPRLSQTF5TbCdWoQa0SM`;
       document.body.appendChild(googleMapsScript);
-
       googleMapsScript.addEventListener("load", e => {
-        this.googleMap = this.geocodeAndInializeMap(this.props.locations);
+        this.inializeMap();
       });
     } else {
-      this.geocodeAndInializeMap(this.props.locations);
+      this.inializeMap();
     }
   }
-
-  // TO DO: Geocode OVER_QUERY_LIMIT error when results array is longer than 11 items
-  geocodeAndInializeMap = addressData => {
+  inializeMap = () => {
     this.setState({
       loading: false
     });
@@ -34,23 +54,33 @@ class Map extends React.Component {
       center: { lat: 39.100273, lng: -94.588769 },
       zoom: 4
     });
+    this.createMarkers(this.props.locations, resultsMap);
+  };
+
+  // Geocode OVER_QUERY_LIMIT error when processing more than 11 items
+  // per minute. Instead of waiting a minute, here I call each one at an
+  // interval of 500 milliseconds which seems to work smoothly
+  createMarkers = (addressData, resultsMap) => {
+    let number = 0;
     const geocoder = new google.maps.Geocoder();
     addressData.map(item => {
-      geocoder.geocode({ address: item.address }, function(
-        results,
-        status
-      ) {
-        if (status == "OK") {
-          new google.maps.Marker({
-            map: resultsMap,
-            position: results[0].geometry.location
-          });
-        } else {
-          alert(
-            "Geocode was not successful for the following reason: " + status
-          );
-        }
-      });
+      setTimeout(() => {
+        this.setState({
+          markerCount: this.state.markerCount + 1
+        });
+        geocoder.geocode({ address: item.address }, function(results, status) {
+          if (status == "OK") {
+            new google.maps.Marker({
+              map: resultsMap,
+              position: results[0].geometry.location
+            });
+          } else {
+            console.error(
+              "Geocode was not successful for the following reason: " + status
+            );
+          }
+        });
+      }, addressData.indexOf(item) * 500);
     });
   };
 
@@ -61,7 +91,12 @@ class Map extends React.Component {
         {this.state.loading ? (
           <h2>locations loading...</h2>
         ) : (
-          <MapBox ref={this.mapBoxRef} />
+          <MapBoxWrapper>
+            {this.state.markerCount !== this.props.locations.length && (
+              <Overlay><h1>Loading locations...</h1></Overlay>
+            )}
+            <MapBox ref={this.mapBoxRef} />
+          </MapBoxWrapper>
         )}
       </React.Fragment>
     );
