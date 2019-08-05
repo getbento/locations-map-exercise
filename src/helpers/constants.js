@@ -168,168 +168,168 @@ export const LOCATIONS = [
       '<p>Closed Mondays</p><p>Open Tuesdays-Thrusday 11:30AM - 2:30PM &amp; 5-10PM</p><p>Friday 11:30AM-2:30PM&nbsp;</p><p>bar stays open Friday 2:30PM-5:00pm for snacks and drinks &amp; full menu resumes 5-10PM</p><p>Saturday 11:30AM-10PM</p><p>Sunday 11:30AM-9PM</p><p><br></p><p><br></p>'
   },
   {
-    slug: 'island-creek-oyster-bar',
-    name: 'Boston',
-    address: '500 Commonwealth Ave., Boston, MA 02215',
-    street: '500 Commonwealth Ave.',
-    city: 'Boston',
-    state: 'MA',
-    postal_code: '02215',
+    slug: "island-creek-oyster-bar",
+    name: "Boston",
+    address: "500 Commonwealth Ave., Boston, MA 02215",
+    street: "500 Commonwealth Ave.",
+    city: "Boston",
+    state: "MA",
+    postal_code: "02215",
     images: [
       {
         url:
-          'https://getbento.imgix.net/accounts/4a5a949bc0bd417a76021f466511248d/media/images/41876ICOB_Bar_Michael_Harlan_Turkell_1.jpg?w=1800&fit=max&auto=compress,format&h=1800',
-        alt_text: ''
+          "https://getbento.imgix.net/accounts/4a5a949bc0bd417a76021f466511248d/media/images/41876ICOB_Bar_Michael_Harlan_Turkell_1.jpg?w=1800&fit=max&auto=compress,format&h=1800",
+        alt_text: ""
       },
       {
         url:
-          'https://getbento.imgix.net/accounts/4a5a949bc0bd417a76021f466511248d/media/images/64009_MHT3284_1.jpg?w=1800&fit=max&auto=compress,format&h=1800',
-        alt_text: ''
+          "https://getbento.imgix.net/accounts/4a5a949bc0bd417a76021f466511248d/media/images/64009_MHT3284_1.jpg?w=1800&fit=max&auto=compress,format&h=1800",
+        alt_text: ""
       },
       {
         url:
-          'https://getbento.imgix.net/accounts/4a5a949bc0bd417a76021f466511248d/media/images/44335Dining_Bar_Corner.jpg?w=1800&fit=max&auto=compress,format&h=1800',
-        alt_text: ''
+          "https://getbento.imgix.net/accounts/4a5a949bc0bd417a76021f466511248d/media/images/44335Dining_Bar_Corner.jpg?w=1800&fit=max&auto=compress,format&h=1800",
+        alt_text: ""
       }
     ],
     hours:
       '<p><strong>MON - THU:&nbsp;</strong>04:00 PM - 11:00 PM<br><strong>FRI:&nbsp;</strong>4:00 PM - 11:30 PM<br><strong>SAT:&nbsp;</strong>11:30 AM - 11:30 PM<br><strong>SUN:&nbsp;</strong>10:30 AM - 11:00 PM</p><p><a class="btn btn-primary" href="https://secure.opentable.com/island-creek-oyster-bar-reservations-boston?restref=52459" target="_blank">Make a Reservation</a></p>'
   },
   {
-    slug: 'mission-navy-yard',
-    name: 'Mission - Navy Yard',
-    address: '1221 Van St SE, Washington, DC 20003',
-    street: '1221 Van St SE',
-    city: 'Washington',
-    state: 'DC',
-    postal_code: '20003',
+    slug: "mission-navy-yard",
+    name: "Mission - Navy Yard",
+    address: "1221 Van St SE, Washington, DC 20003",
+    street: "1221 Van St SE",
+    city: "Washington",
+    state: "DC",
+    postal_code: "20003",
     images: [
       {
         url:
-          'https://getbento.imgix.net/accounts/347236712c24f86264d50fb2c1f82503/media/images/42757cropped.jpg?w=1800&fit=max&auto=compress,format&h=1800',
-        alt_text: ''
+          "https://getbento.imgix.net/accounts/347236712c24f86264d50fb2c1f82503/media/images/42757cropped.jpg?w=1800&fit=max&auto=compress,format&h=1800",
+        alt_text: ""
       }
     ],
-    hours: ''
+    hours: ""
   },
   {
-    slug: 'pelican',
-    name: 'Pelican',
-    address: '1263 NW 31st Ave., Fort Lauderdale, FL 33311',
-    street: '1263 NW 31st Ave.',
-    city: 'Fort Lauderdale',
-    state: 'FL',
-    postal_code: '33311',
+    slug: "pelican",
+    name: "Pelican",
+    address: "1263 NW 31st Ave., Fort Lauderdale, FL 33311",
+    street: "1263 NW 31st Ave.",
+    city: "Fort Lauderdale",
+    state: "FL",
+    postal_code: "33311",
     images: [],
     hours:
       '<p><strong><span style="font-size: 18px;">Monday - Thursday</span></strong><span style="font-size: 18px;">, 11AM &ndash; 8:30PM<br><strong>Friday &amp; Saturday</strong>, 10:30AM&ndash;9:30PM<br><strong>Sunday</strong>, Closed</span></p>'
   },
   {
-    slug: 'suprema-provisions',
-    name: 'Suprema Provisions',
-    address: '305 Bleecker St, New York, NY 10014',
-    street: '305 Bleecker St',
-    city: 'New York',
-    state: 'NY',
-    postal_code: '10014',
+    slug: "suprema-provisions",
+    name: "Suprema Provisions",
+    address: "305 Bleecker St, New York, NY 10014",
+    street: "305 Bleecker St",
+    city: "New York",
+    state: "NY",
+    postal_code: "10014",
     images: [],
     hours:
-      '<p><strong><em>Serving Lunch, Dinner and Weekend Brunch</em></strong></p><p><strong>Monday</strong> 5pm - 11pm</p><p><strong>Tuesday - Thursday:&nbsp;</strong>11am - 11pm</p><p><strong>Friday - Saturday:&nbsp;</strong>11am - 12am</p><p><strong>Sunday:</strong> 11am - 10pm</p><p><strong>Happy Hour Monday - Friday:</strong> 5pm - 7pm</p>'
+      "<p><strong><em>Serving Lunch, Dinner and Weekend Brunch</em></strong></p><p><strong>Monday</strong> 5pm - 11pm</p><p><strong>Tuesday - Thursday:&nbsp;</strong>11am - 11pm</p><p><strong>Friday - Saturday:&nbsp;</strong>11am - 12am</p><p><strong>Sunday:</strong> 11am - 10pm</p><p><strong>Happy Hour Monday - Friday:</strong> 5pm - 7pm</p>"
   },
   {
-    slug: 'king-street-bar',
-    name: 'King Street Bar',
-    address: '170 S. King St., Seattle, WA 98104',
-    street: '170 S. King St.',
-    city: 'Seattle',
-    state: 'WA',
-    postal_code: '98104',
+    slug: "king-street-bar",
+    name: "King Street Bar",
+    address: "170 S. King St., Seattle, WA 98104",
+    street: "170 S. King St.",
+    city: "Seattle",
+    state: "WA",
+    postal_code: "98104",
     images: [],
     hours:
       '<p style="text-align: center;"><a data-bb-track="button" data-bb-track-action="Click" data-bb-track-category="Address" data-bb-track-label="Header" data-bb-track-on="click" href="http://google.com/maps?q=King%20Street%20Bar+170%20S.%20King%20St.,%20Seattle,%20WA%2098104" rel="noopener noreferrer" target="_blank">170 S. King St., Seattle, WA 98104</a><br><a data-bb-track="button" data-bb-track-action="Click" data-bb-track-category="Phone Number" data-bb-track-label="Header" data-bb-track-on="click" href="tel:(206)%20749-9890" target="_blank">(206) 749-9890</a></p><table style="width: 100%;"><tbody><tr><td style="width: 33.3333%;"><h3 style="text-align: center;"><strong>Kitchen Hours</strong></h3><h3 style="text-align: center;"><strong>Mon - Thu</strong></h3><div style="text-align: center;">11 am to 8 pm (or later)</div><h3 style="text-align: center;"><strong>Fri</strong></h3><div style="text-align: center;">11 am to 11 pm</div><h3 style="text-align: center;"><strong>Sat</strong></h3><div style="text-align: center;">1 pm to 8 pm (or later)</div></td><td style="width: 33.3333%; text-align: center;"><h3 style="text-align: center;"><strong>Special Sat/Sun Hours</strong></h3><div style="text-align: center;">during games and events.</div><div style="text-align: center;">Always open at least 2 hours prior to all <strong>Mariners</strong> and <strong>Sounders</strong> games!</div><div style="text-align: center;">Open 8 am Sundays for <span>ALL&nbsp;</span><strong>Seahawks</strong> home day games!</div><div style="text-align: center;"><strong>GO HAWKS!</strong></div><p><strong>Kids Welcome All Days Except Seahawk Home Game Days and Select Special Event Days.</strong></p></td><td style="width: 33.3333%;"><h3 style="text-align: center;"><strong>Happy Hours</strong></h3><h3 style="text-align: center;"><strong>Mon - Fri</strong></h3><div style="text-align: center;">3 pm to 7 pm</div><h3 style="text-align: center;"><strong>Fri</strong></h3><div style="text-align: center;">9 pm to 11 pm</div><h3 style="text-align: center;"><strong>Happy Hour Sat</strong></h3><div style="text-align: center;">Happy Hour All Day!</div></td></tr></tbody></table>'
   },
   {
-    slug: 'lower-east-side',
-    name: 'HOUSTON STREET',
-    address: '147 E Houston St, New York, NY 10002',
-    street: '147 E Houston St',
-    city: 'New York',
-    state: 'NY',
-    postal_code: '10002',
+    slug: "lower-east-side",
+    name: "HOUSTON STREET",
+    address: "147 E Houston St, New York, NY 10002",
+    street: "147 E Houston St",
+    city: "New York",
+    state: "NY",
+    postal_code: "10002",
     images: [
       {
         url:
-          'https://getbento.imgix.net/accounts/cdea98b65f2405a7d20615bd097ced17/media/images/39419evillage.jpg?w=1800&fit=max&auto=compress,format&h=1800',
-        alt_text: ''
+          "https://getbento.imgix.net/accounts/cdea98b65f2405a7d20615bd097ced17/media/images/39419evillage.jpg?w=1800&fit=max&auto=compress,format&h=1800",
+        alt_text: ""
       }
     ],
     hours:
-      '<p><strong>Sunday - Wednesday:</strong> 11am&ndash;Midnight<br><strong>Thursday:</strong> 11am&ndash;1am<br><strong>Friday and Saturday:</strong> 11am&ndash;4am</p>'
+      "<p><strong>Sunday - Wednesday:</strong> 11am&ndash;Midnight<br><strong>Thursday:</strong> 11am&ndash;1am<br><strong>Friday and Saturday:</strong> 11am&ndash;4am</p>"
   },
   {
-    slug: 'tavernier',
-    name: 'Tavernier',
-    address: '91885 Overseas Hwy, Tavernier, FL 33070',
-    street: '91885 Overseas Hwy',
-    city: 'Tavernier',
-    state: 'FL',
-    postal_code: '33070',
+    slug: "tavernier",
+    name: "Tavernier",
+    address: "91885 Overseas Hwy, Tavernier, FL 33070",
+    street: "91885 Overseas Hwy",
+    city: "Tavernier",
+    state: "FL",
+    postal_code: "33070",
     images: [],
     hours:
-      '<p >Monday: 5:00 AM – 9:00 PM</p>\n\n<p >Tuesday: 5:00 AM – 9:00 PM</p>\n\n<p >Wednesday: 5:00 AM – 9:00 PM</p>\n\n<p >Thursday: 5:00 AM – 9:00 PM</p>\n\n<p >Friday: 5:00 AM – 9:00 PM</p>\n\n<p >Saturday: 5:00 AM – 9:00 PM</p>\n\n<p >Sunday: 5:00 AM – 9:00 PM</p>'
+      "<p >Monday: 5:00 AM – 9:00 PM</p>\n\n<p >Tuesday: 5:00 AM – 9:00 PM</p>\n\n<p >Wednesday: 5:00 AM – 9:00 PM</p>\n\n<p >Thursday: 5:00 AM – 9:00 PM</p>\n\n<p >Friday: 5:00 AM – 9:00 PM</p>\n\n<p >Saturday: 5:00 AM – 9:00 PM</p>\n\n<p >Sunday: 5:00 AM – 9:00 PM</p>"
   },
   {
-    slug: 'bud-alleys-pizza-bar',
-    name: 'Pizza Bar',
-    address: '2236 East County Highway 30-A, Seaside, Florida 32459',
-    street: '2236 East County Highway 30-A',
-    city: 'Seaside',
-    state: 'Florida',
-    postal_code: '32459',
+    slug: "bud-alleys-pizza-bar",
+    name: "Pizza Bar",
+    address: "2236 East County Highway 30-A, Seaside, Florida 32459",
+    street: "2236 East County Highway 30-A",
+    city: "Seaside",
+    state: "Florida",
+    postal_code: "32459",
     images: [],
     hours:
       '<div style="text-align: center;"><br></div><h1 style="text-align: center;">Location</h1><p style="text-align: center;">2236 East County Road 30-A<br>Seaside, Florida 32459<br><strong>Phone #:</strong> <a href="tel:8502313113" target="_blank">(850) 231-3113</a><br><br></p><h2 style="text-align: center;">Hours</h2><p style="text-align: center;"><strong>Daily:</strong> 11:00am - 9:00pm</p><p style="text-align: center;"><br></p><p style="text-align: center;"><a href="https://www.pronto30a.com/order/restaurant/2" style="border: 3px solid rgb(171, 162, 162); border-radius: 8px; padding: 20px; color: rgb(222, 22, 22); background-color: rgb(209, 208, 208); font-size: 24px; text-decoration: none; font-family: Arial; display: inline-block;">Order Delivery Now!</a></p>'
   },
   {
-    slug: 'seneca',
-    name: 'Seneca',
-    address: '685 By-Pass 123, Seneca, SC 29678',
-    street: '685 By-Pass 123',
-    city: 'Seneca',
-    state: 'SC',
-    postal_code: '29678',
+    slug: "seneca",
+    name: "Seneca",
+    address: "685 By-Pass 123, Seneca, SC 29678",
+    street: "685 By-Pass 123",
+    city: "Seneca",
+    state: "SC",
+    postal_code: "29678",
     images: [],
     hours:
-      '<p>Monday 4:00 PM - 9:00 PM<br>Tuesday 11:00 AM - 9:00 PM<br>Wednesday 11:00 AM - 9:00 PM<br>Thursday 11:00 AM - 9:00 PM<br>Friday 11:00 AM - 10:00 PM<br>Saturday 11:00 AM - 10:00 PM<br>Sunday 11:00 AM - 9:00 PM</p>'
+      "<p>Monday 4:00 PM - 9:00 PM<br>Tuesday 11:00 AM - 9:00 PM<br>Wednesday 11:00 AM - 9:00 PM<br>Thursday 11:00 AM - 9:00 PM<br>Friday 11:00 AM - 10:00 PM<br>Saturday 11:00 AM - 10:00 PM<br>Sunday 11:00 AM - 9:00 PM</p>"
   },
   {
-    slug: 'calhoun',
-    name: 'Calhoun',
-    address: '1214 N Wall St, Calhoun, GA 30701',
-    street: '1214 N Wall St',
-    city: 'Calhoun',
-    state: 'GA',
-    postal_code: '30701',
+    slug: "calhoun",
+    name: "Calhoun",
+    address: "1214 N Wall St, Calhoun, GA 30701",
+    street: "1214 N Wall St",
+    city: "Calhoun",
+    state: "GA",
+    postal_code: "30701",
     images: [],
     hours:
-      '<p>Tuesday- Saturday &nbsp;11:00 a.m. til 9:00 p.m.</p><p>CLOSED SUNDAY-MONDAY</p>'
+      "<p>Tuesday- Saturday &nbsp;11:00 a.m. til 9:00 p.m.</p><p>CLOSED SUNDAY-MONDAY</p>"
   },
   {
-    slug: 'coral-gables',
-    name: 'Coral Gables',
-    address: '1514 South Dixie Highway, Coral Gables, FL 33146',
-    street: '1514 South Dixie Highway',
-    city: 'Coral Gables',
-    state: 'FL',
-    postal_code: '33146',
+    slug: "coral-gables",
+    name: "Coral Gables",
+    address: "1514 South Dixie Highway, Coral Gables, FL 33146",
+    street: "1514 South Dixie Highway",
+    city: "Coral Gables",
+    state: "FL",
+    postal_code: "33146",
     images: [
       {
         url:
-          'https://getbento.imgix.net/accounts/5f38187550ff162ac22cbf3e1036edbc/media/images/42134USED_50egg1_7038_1.jpg?w=1800&fit=max&auto=compress,format&h=1800',
-        alt_text: ''
+          "https://getbento.imgix.net/accounts/5f38187550ff162ac22cbf3e1036edbc/media/images/42134USED_50egg1_7038_1.jpg?w=1800&fit=max&auto=compress,format&h=1800",
+        alt_text: ""
       }
     ],
     hours:
-      '<p>11:30am-10pm Monday - Thursday&nbsp;</p><p>11:30am-11pm Fridays</p><p>9am-11pm Saturdays</p><p>9am-10pm Sundays&nbsp;</p>'
+      "<p>11:30am-10pm Monday - Thursday&nbsp;</p><p>11:30am-11pm Fridays</p><p>9am-11pm Saturdays</p><p>9am-10pm Sundays&nbsp;</p>"
   }
 ];
