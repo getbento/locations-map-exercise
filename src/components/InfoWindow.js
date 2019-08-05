@@ -15,12 +15,11 @@ const DetailsLink = styled.p`
 
 const InfoWindow = props => {
   const item = props.item;
-  console.log(item);
   return (
     <InfoWindowWrapper>
       <h4>{item.name}</h4>
       <p>{item.address}</p>
-      <DetailsLink onClick={props.showExtendedInfo}>
+      <DetailsLink onClick={() => props.toggleExtendedInfo(item)}>
         {"View Details"}
       </DetailsLink>
     </InfoWindowWrapper>

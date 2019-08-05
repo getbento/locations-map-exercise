@@ -7,7 +7,7 @@ import { fetchLocations } from "../helpers/api";
 import Map from "../components/Map";
 
 const Title = styled.h1`
-  font-weight: 100;
+  font-weight: 300;
 `;
 
 const FlexContainer = styled.div`
@@ -46,7 +46,7 @@ class App extends React.Component {
           {this.state.locations && this.state.locations.length ? (
             <Map locations={this.state.locations} />
           ) : (
-            <h2>MAP LOADING....</h2>
+            <h2>LOADING MAP....</h2>
           )}
         </MapBox>
       </FlexContainer>
